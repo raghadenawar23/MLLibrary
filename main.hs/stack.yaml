@@ -1,0 +1,14 @@
+resolver: lts-20.26  # This version has better compatibility
+packages:
+- .
+extra-deps:
+- hmatrix-0.20.2
+- random-1.2.1.1
+system-ghc: true
+extra-include-dirs:
+- /usr/include
+extra-lib-dirs:
+- /usr/lib
+flags:
+  hmatrix:
+    openblas: true

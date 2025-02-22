@@ -1,0 +1,22 @@
+name:                MLLibrary
+version:             0.1.0.0
+build-type:          Simple
+cabal-version:       2.0
+
+library
+  exposed-modules:     Mllibrary
+  hs-source-dirs:      Mllibrary
+  build-depends:       base >= 4.7 && < 5
+                    , hmatrix == 0.20.*
+                    , random == 1.2.*
+  default-language:    Haskell2010
+
+executable mlexample
+  hs-source-dirs:      .
+  main-is:             Examples/Examples.hs
+  other-modules:       Mllibrary
+  build-depends:       base >= 4.7 && < 5
+                    , hmatrix == 0.20.*
+                    , random == 1.2.*
+                    , MLLibrary
+  default-language:    Haskell2010
