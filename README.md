@@ -1,11 +1,9 @@
-Below is an updated, more professional version of your README file that you can use on GitHub. This version includes badges, clear sections, and refined language for a polished look:
-
----
+### README.md
 
 ```markdown
 # Haskell Machine Learning Library
 
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/yourusername/your-repo) 
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/raghadenawar23/MLLibrary) 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Hackage version](https://img.shields.io/hackage/v/hmatrix)](https://hackage.haskell.org/package/hmatrix)
 
@@ -22,19 +20,15 @@ The implementation leverages the high-performance [hmatrix](https://hackage.hask
 ## Project Structure
 
 ```
-.
-├── README.md          # Project documentation and usage instructions
+
+├── README.md          # Project documentation and setup instructions
+
+├── DOCUMENTATION.md   # Detailed project idea and usage documentation
+
 ├── Main.hs            # Entry point with example usage
+
 └── Mllibrary.hs       # Module containing machine learning algorithms
 ```
-
----
-
-## Features
-
-- **Linear Regression:** Implemented with gradient descent optimization.
-- **Logistic Regression:** For binary classification tasks using gradient descent.
-- **KMeans Clustering:** Cluster analysis using Euclidean distance.
 
 ---
 
@@ -108,9 +102,9 @@ The `hmatrix` package requires BLAS and LAPACK libraries. Install them as follow
 
 ---
 
-## Usage
+## Usage Example
 
-The `Main.hs` file provides an example of how to use the library. For instance, here is a sample code snippet to train a linear regression model:
+The `Main.hs` file demonstrates a sample usage by training a linear regression model:
 
 ```haskell
 import qualified Mllibrary as ML
@@ -129,7 +123,8 @@ main = do
     print model
 ```
 
-Feel free to modify `Main.hs` to experiment with logistic regression or KMeans clustering as needed.
+Feel free to modify `Main.hs` to experiment with logistic regression or k-means clustering.
+
 
 ---
 
@@ -141,14 +136,11 @@ This project is licensed under the [MIT License](LICENSE). You are free to use, 
 
 ## Acknowledgements
 
-- The [hmatrix](https://hackage.haskell.org/package/hmatrix) library for providing the necessary numerical computation capabilities.
+- The [hmatrix](https://hackage.haskell.org/package/hmatrix) library for providing robust numerical computation capabilities.
 - The Haskell community for their continuous support and open-source contributions.
-
----
 
 For questions, issues, or suggestions, please open an issue or contact the repository maintainers.
 ```
 
 ---
 
-This revised README provides clear instructions, professional formatting, and useful badges to improve the project's appearance on GitHub. Simply replace placeholders like the badge links and repository URL with your actual project details.
