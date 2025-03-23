@@ -42,12 +42,12 @@ getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: 
 
 
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
-bindir     = "/workspaces/MLLibrary/.stack-work/install/x86_64-linux-tinfo6-libc6-pre232/5b1f75cef313fdbbea68cea0c4a6365e95b7451b9c153b1ebd62fd43fb817600/9.2.8/bin"
-libdir     = "/workspaces/MLLibrary/.stack-work/install/x86_64-linux-tinfo6-libc6-pre232/5b1f75cef313fdbbea68cea0c4a6365e95b7451b9c153b1ebd62fd43fb817600/9.2.8/lib/x86_64-linux-ghc-9.2.8/MLLibrary-0.1.0.0-Fva2hfWeAzELL3oXZnOc9p"
-dynlibdir  = "/workspaces/MLLibrary/.stack-work/install/x86_64-linux-tinfo6-libc6-pre232/5b1f75cef313fdbbea68cea0c4a6365e95b7451b9c153b1ebd62fd43fb817600/9.2.8/lib/x86_64-linux-ghc-9.2.8"
-datadir    = "/workspaces/MLLibrary/.stack-work/install/x86_64-linux-tinfo6-libc6-pre232/5b1f75cef313fdbbea68cea0c4a6365e95b7451b9c153b1ebd62fd43fb817600/9.2.8/share/x86_64-linux-ghc-9.2.8/MLLibrary-0.1.0.0"
-libexecdir = "/workspaces/MLLibrary/.stack-work/install/x86_64-linux-tinfo6-libc6-pre232/5b1f75cef313fdbbea68cea0c4a6365e95b7451b9c153b1ebd62fd43fb817600/9.2.8/libexec/x86_64-linux-ghc-9.2.8/MLLibrary-0.1.0.0"
-sysconfdir = "/workspaces/MLLibrary/.stack-work/install/x86_64-linux-tinfo6-libc6-pre232/5b1f75cef313fdbbea68cea0c4a6365e95b7451b9c153b1ebd62fd43fb817600/9.2.8/etc"
+bindir     = "/workspaces/MLLibrary/.stack-work/install/x86_64-linux-tinfo6-libc6-pre232/bba7ce53fb55fb8e5bab3008f3b11ecaae21342243d78b32f66b04b58b7d502c/9.2.8/bin"
+libdir     = "/workspaces/MLLibrary/.stack-work/install/x86_64-linux-tinfo6-libc6-pre232/bba7ce53fb55fb8e5bab3008f3b11ecaae21342243d78b32f66b04b58b7d502c/9.2.8/lib/x86_64-linux-ghc-9.2.8/MLLibrary-0.1.0.0-Fva2hfWeAzELL3oXZnOc9p"
+dynlibdir  = "/workspaces/MLLibrary/.stack-work/install/x86_64-linux-tinfo6-libc6-pre232/bba7ce53fb55fb8e5bab3008f3b11ecaae21342243d78b32f66b04b58b7d502c/9.2.8/lib/x86_64-linux-ghc-9.2.8"
+datadir    = "/workspaces/MLLibrary/.stack-work/install/x86_64-linux-tinfo6-libc6-pre232/bba7ce53fb55fb8e5bab3008f3b11ecaae21342243d78b32f66b04b58b7d502c/9.2.8/share/x86_64-linux-ghc-9.2.8/MLLibrary-0.1.0.0"
+libexecdir = "/workspaces/MLLibrary/.stack-work/install/x86_64-linux-tinfo6-libc6-pre232/bba7ce53fb55fb8e5bab3008f3b11ecaae21342243d78b32f66b04b58b7d502c/9.2.8/libexec/x86_64-linux-ghc-9.2.8/MLLibrary-0.1.0.0"
+sysconfdir = "/workspaces/MLLibrary/.stack-work/install/x86_64-linux-tinfo6-libc6-pre232/bba7ce53fb55fb8e5bab3008f3b11ecaae21342243d78b32f66b04b58b7d502c/9.2.8/etc"
 
 getBinDir     = catchIO (getEnv "MLLibrary_bindir")     (\_ -> return bindir)
 getLibDir     = catchIO (getEnv "MLLibrary_libdir")     (\_ -> return libdir)

@@ -2,9 +2,9 @@ name: MLLibrary
 version: 0.1.0.0
 dependencies:
   - base >= 4.7 && < 5
-  - hmatrix
-  - random
-  - vector
+  - hmatrix >= 0.20
+  - random >= 1.2
+  - vector >= 0.12
 
 library:
   source-dirs: src
@@ -16,11 +16,13 @@ library:
     - ScopedTypeVariables
 
 executables:
-  mlmain:
+  MLLibrary-exe:
     main: Main.hs
     source-dirs: app
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
     dependencies:
       - MLLibrary
       - hmatrix
-    default-extensions:
-      - FlexibleContexts

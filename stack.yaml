@@ -1,5 +1,13 @@
-resolver: lts-20.26
+resolver: lts-20.26  # More stable version
 packages:
 - .
 extra-deps:
 - hmatrix-0.20.2
+- random-1.2.1.1
+flags:
+  hmatrix:
+    openblas: false
+extra-include-dirs:
+- /usr/include
+extra-lib-dirs:
+- /usr/lib
