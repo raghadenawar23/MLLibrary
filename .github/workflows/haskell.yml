@@ -11,33 +11,35 @@ permissions:
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
+    runs-on: windows-latest  # Use Windows runner
 
     steps:
     - uses: actions/checkout@v4
-    - uses: actions/setup-haskell@v1
+    - uses: actions/setup-haskell@v2
       with:
         ghc-version: '8.10.3'
         cabal-version: '3.2'
 
     - name: Cache
       uses: actions/cache@v3
-      env:
-        cache-name: cache-cabal
       with:
-        path: ~/.cabal
-        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/*.cabal') }}-${{ hashFiles('**/cabal.project') }}
+        path: |
+          C:\Users\runneradmin\AppData\Roaming\cabal
+          dist-newstyle
+        key: ${{ runner.os }}-cabal-${{ hashFiles('**/*.cabal') }}-${{ hashFiles('**/cabal.project') }}
         restore-keys: |
-          ${{ runner.os }}-build-${{ env.cache-name }}-
-          ${{ runner.os }}-build-
-          ${{ runner.os }}-
+          ${{ runner.os }}-cabal-
 
     - name: Install dependencies
       run: |
         cabal update
         cabal build --only-dependencies --enable-tests --enable-benchmarks
+      shell: pwsh  # Use PowerShell on Windows
+
     - name: Build
-      run: cabal build --enable-tests --enable-benchmarks all
+      run: cabal build --enable-tests --enable-benchmarks
+      shell: pwsh
+
     - name: Run tests
-      run: cabal test all
+      run: cabal test --test-show-details=direct
+      shell: pwsh
