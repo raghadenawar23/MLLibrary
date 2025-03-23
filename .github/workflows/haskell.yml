@@ -1,0 +1,17 @@
+runs-on: windows-latest
+...
+- name: Cache
+  uses: actions/cache@v3
+  with:
+    path: |
+      C:\Users\runneradmin\AppData\Roaming\cabal
+      dist-newstyle
+    key: ${{ runner.os }}-cabal-${{ hashFiles('**/*.cabal') }}-${{ hashFiles('**/cabal.project') }}
+    restore-keys: |
+      ${{ runner.os }}-cabal-
+...
+- name: Install dependencies
+  run: |
+    cabal update
+    cabal build --only-dependencies --enable-tests --enable-benchmarks
+  shell: pwsh
